@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
@@ -15,27 +17,23 @@ class LoginPage(BasePage):
         super().__init__(driver)
 
     def skip_announcement(self):
-        self.click(self.next_button)
-        self.click(self.next_button)
+        self.click(self.next_button, "Skip Announcement")
+        time.sleep(3)
+        self.click(self.next_button, "Skip Announcement")
 
     def set_email_address(self, username):
-        self.set(self.username_field, username)
+        self.set(self.username_field, username, "Login Name")
         # self.driver.find_element(self.email_address_field).send_keys(email_address)
 
     def set_password(self, password):
-        self.set(self.password_field, password)
+        self.set(self.password_field, password, "Password")
 
     def click_login_button(self):
-        self.click(self.login_button)
+        self.click(self.login_button, "Login Button")
         # return MyAccountPage(self.driver)
 
     def log_into_application(self, email, password):
         self.set_email_address(email)
         self.set_password(password)
         self.click_login_button()
-
-    """
-    def get_warning_message(self):
-    return self.get_text(self.warning_message)
- """
 

@@ -4,7 +4,7 @@ class TestData:
     password = "password1*"
 
     # Sell Insurance Test Data
-    insured_lastname = "Cayetano"
+    insured_lastname = "Testname"
     insured_firstname = "Peter"
     insured_middlename = "Silva"
     insured_date_of_birth = "02/05/1976"
@@ -19,11 +19,11 @@ class TestData:
     bene_lastname = "Zsa"
     bene_firstname = "Mary Rose"
     bene_middlename = "Camel"
-    bene_relationship = "Cousin"
-    amount_recieved = "460"
+    bene_relationship = "Sibling"
+    amount_recieved = 460
     family_lastname = "Cayetano"
     family_firstname = "Claire"
     family_middlename = "Ooopsie"
-    family_dateofbirth = "05/06/2004"
+    family_dateofbirth = "05/06/2009"
     family_relationship = "Sibling"
     reference_client_id = "123456"

@@ -1,3 +1,5 @@
+import time
+
 from selenium.webdriver.common.by import By
 
 from pages.base_page import BasePage
@@ -12,6 +14,7 @@ class NavBarMenu(BasePage):
         super().__init__(driver)
 
     def click_sell_insurance_submenu(self):
-        self.click(self.member_transactions)
-        self.click(self.sell_insurance)
-        self.click(self.sell_insurance_sellinsurance)
+        self.click(self.member_transactions, "Member Transaction")
+        time.sleep(3)
+        self.click(self.sell_insurance, "Sell Insurance")
+        self.click(self.sell_insurance_sellinsurance, "Sub-Menu Sell Insurance")
